@@ -36,13 +36,15 @@ header h1 {
     font-size: 2.5rem;
     margin: 0;
     animation: bounceIn 1.5s ease-in-out;
-    color: black;
+    color: white;
+    font-weight: bold;
 }
 
 header p {
     margin: 10px 0 0;
     font-size: 1.2rem;
-    color: black;
+    color: white;
+    font-weight: bold;
 }
 
 nav ul {
@@ -56,12 +58,14 @@ nav ul li {
     display: inline-block;
     position: relative;
     margin: 0 var(--nav-padding);
-    color: black;
+    color: white;
+    font-weight: bold;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: black;
+    color: white;
+    font-weight: bold;
     font-size: 1rem;
     padding: 8px 12px;
     display: block;
