@@ -17,7 +17,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('assets/Mount-H.jpg') no-repeat center center fixed;
+    background: url('Assets/principal.jpg') no-repeat center center fixed;
     background-size: cover;
     color: var(--text-color);
     text-align: center;
@@ -647,7 +647,7 @@ footer p {
 .about-section {
     padding: 100px 20px;
     text-align: center;
-    background: url('assets/Mount-S.jpg') no-repeat center center fixed;
+    background: url('Assets/about.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
     color: var(--text-color-light);
