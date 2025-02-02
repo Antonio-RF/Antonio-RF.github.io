@@ -41,6 +41,7 @@ header h1 {
 header p {
     margin: 10px 0 0;
     font-size: 1.2rem;
+    color: black;
 }
 
 nav ul {
