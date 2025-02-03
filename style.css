@@ -649,7 +649,7 @@ footer p {
     background: url('Assets/about.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
-    color: var(--text-color-light);
+    color: #ff0000;
     box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.6);
     animation: fadeInUp 1.5s ease-out, rotateBg 15s linear infinite;
 }
@@ -688,7 +688,7 @@ footer p {
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--text-color-light);
+    color: #ff0000;
     animation: slideInLeft 1s ease-out;
     transition: color var(--transition-duration);
 }
@@ -806,20 +806,23 @@ footer p {
 }
 
 .blog {
-    background: #f8f8f8;
+    background: url('Assets/principal.jpg') no-repeat center center;
+    background-size: cover;
     padding: 60px 20px;
     margin: 40px 0;
     border-radius: 15px;
     box-shadow: var(--box-shadow-light);
+    position: relative;
 }
 
 .blog h2 {
     font-size: 2.5rem;
     text-align: center;
-    color: var(--primary-color);
+    color: #ff0000;
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    z-index: 1;
 }
 
 .blog-posts {
@@ -827,16 +830,18 @@ footer p {
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
+    z-index: 1;
 }
 
 .blog-post {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.8);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow-light);
     width: 300px;
     overflow: hidden;
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
 }
 
 .blog-post:hover {
@@ -1010,7 +1015,7 @@ footer p {
 
 .article-footer p {
     font-size: var(--font-size-small);
-    color: #fff;
+    color: #ff0000;
     margin-bottom: 10px;
     font-family: var(--font-family-alt);
 }
@@ -1024,7 +1029,7 @@ footer p {
 
 .article-footer .social-icons a {
     font-size: 1.5rem;
-    color: #fff;
+    color: #ff0000;
     transition: transform 0.3s ease;
 }
 
@@ -1051,5 +1056,15 @@ footer p {
 .article-btn:active {
     transform: scale(1);
 }
+
+#contact h2 {
+    color: #ff0000; /* Título 'Contact' em vermelho */
+}
+
+#contact p {
+    color: #fff; /* E-mails em branco */
+}
+
+
 
 /*End of the code!*/
