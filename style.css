@@ -438,12 +438,31 @@ footer p {
 }
 
 .certificates {
+    background: #fff;
+    padding: 40px 20px;
+    margin: 40px 0;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.certificates h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.certificates-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .certificate {
@@ -457,11 +476,17 @@ footer p {
     border-radius: 12px;
     overflow: hidden;
     position: relative;
+    padding: 15px;
+    box-shadow: var(--box-shadow);
+}
+
+.certificate:first-child {
+    background: linear-gradient(135deg, var(--highlight-color), var(--secondary-color));
 }
 
 .certificate:hover {
     transform: scale(var(--hover-scale)) rotate(3deg);
-    box-shadow: 0 8px 15px var(--shadow-color);
+    box-shadow: var(--hover-shadow);
 }
 
 .certificate img {
@@ -480,7 +505,7 @@ footer p {
 .certificate p {
     margin-top: 10px;
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--text-color);
     font-size: 16px;
     transition: color var(--transition-duration);
 }
@@ -530,20 +555,26 @@ footer p {
 }
 
 .modal-content {
-    max-width: var(--max-modal-width);
-    width: var(--modal-content-width);
-    margin: 10% auto;
+    max-width: 90%;
+    max-height: 90%;
+    margin: 5% auto;
     display: block;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background: #fff;
     transition: transform var(--modal-transition-duration);
     transform: scale(0.9);
+    object-fit: contain; /* Ajusta a imagem para se ajustar ao modal sem distorcer */
 }
 
 .modal.show .modal-content {
     transform: scale(1);
 }
+
+:root {
+    --modal-bg: rgba(0, 0, 0, 0.7);  /* Fundo escuro semi-transparente */
+}
+
 
 #caption {
     text-align: center;
@@ -1064,7 +1095,6 @@ footer p {
 #contact p {
     color: #fff; /* E-mails em branco */
 }
-
 
 
 /*End of the code!*/
