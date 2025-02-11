@@ -1,47 +1,26 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const dropdown = document.querySelectorAll('.dropdown');
-    dropdown.forEach(item => {
-        let timeout;
-
-        item.addEventListener('mouseenter', () => {
-            
-            clearTimeout(timeout);
-            const dropdownMenu = item.querySelector('.dropdown-menu');
-            dropdownMenu.style.display = 'block'; 
-        });
-
-        item.addEventListener('mouseleave', () => {
-            const dropdownMenu = item.querySelector('.dropdown-menu');
-            
-            timeout = setTimeout(() => {
-                dropdownMenu.style.display = 'none';
-            }, 500); 
-        });
-    });
-});
-
-const certificates = document.querySelectorAll('.certificate');
-const modal = document.getElementById('certificateModal');
-const modalImage = document.getElementById('modalImage');
-const caption = document.getElementById('caption');
-const closeModal = document.querySelector('.close');
+    const certificates = document.querySelectorAll('.certificate');
+    const modal = document.getElementById('certificateModal');
+    const modalImage = document.getElementById('modalImage');
+    const caption = document.getElementById('caption');
+    const closeModal = document.querySelector('.close');
 
     certificates.forEach(cert => {
         cert.addEventListener('click', () => {
-       
-            const imgSrc = cert.querySelector('img').src; 
-            modal.style.display = "block"; 
-            modalImage.src = imgSrc; 
-            caption.textContent = cert.querySelector('p').textContent; 
-         });
-    });
+            const imgSrc = cert.querySelector('img').src; // Captura o src da imagem clicada
+            modal.classList.add('show'); // Add the 'show' class to the modal
+            modalImage.src = imgSrc; // Atribui a imagem ao modal
+            caption.textContent = cert.querySelector('p').textContent; // Adiciona a descrição ao modal
+        });
+    });    
 
     closeModal.addEventListener('click', () => {
-       modal.style.display = "none";
+        modal.classList.remove('show'); // Fecha o modal ao remover a classe 'show'
     });
 
     window.addEventListener('click', (e) => {
         if (e.target === modal) {
-        modal.style.display = "none";
-         }
+            modal.classList.remove('show'); // Fecha o modal ao clicar fora dele
+        }
     });
+});
