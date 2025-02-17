@@ -1096,5 +1096,50 @@ footer p {
     color: #000000; /* E-mails em branco */
 }
 
+.pictures-section {
+    background: red;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 33.33%;
+    transition: opacity 0.5s;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.carousel-btn.left {
+    left: 10px;
+}
+
+.carousel-btn.right {
+    right: 10px;
+}
+
 
 /*End of the code!*/

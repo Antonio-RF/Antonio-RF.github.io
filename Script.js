@@ -24,3 +24,22 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+let index = 0;
+
+function moveSlide(direction) {
+    const carousel = document.querySelector('.carousel');
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+
+    index += direction;
+
+    if (index < 0) {
+        index = totalItems - 1;
+    } else if (index >= totalItems) {
+        index = 0;
+    }
+
+    const itemWidth = items[0].clientWidth; 
+    carousel.style.transform = `translateX(${-index * itemWidth}px)`;
+}
