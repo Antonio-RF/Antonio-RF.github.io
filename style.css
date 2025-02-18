@@ -1191,15 +1191,18 @@ footer p {
 }
 
 #projects {
-    margin-bottom: 80px; /* Aumentei para 80px (ou o valor que preferir) */
+    padding-top: 100px; 
+    padding-bottom: 100px;
 }
 
 #skills {
-    margin-bottom: 80px; /* Aumentei para 80px (ou o valor que preferir) */
+    padding-top: 80px; 
+    padding-bottom: 80px;
 }
 
 #certificates {
-    margin-bottom: 80px; /* Aumentei para 80px (ou o valor que preferir) */
+    padding-top: 80px; 
+    padding-bottom: 80px;
 }
 
 

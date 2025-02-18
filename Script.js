@@ -1,3 +1,24 @@
+// Função para ajustar o scroll ao clicar nos links do menu
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); // Previne o comportamento padrão do link
+
+        const targetId = this.getAttribute('href'); // Pega o ID da seção alvo
+        const targetSection = document.querySelector(targetId); // Seleciona a seção alvo
+
+        if (targetSection) {
+            // Calcula a posição central da seção
+            const offset = targetSection.offsetTop - (window.innerHeight / 2) + (targetSection.offsetHeight / 2);
+            
+            // Rola a página até a posição central da seção
+            window.scrollTo({
+                top: offset,
+                behavior: 'smooth' // Rola suavemente
+            });
+        }
+    });
+});
+
 document.addEventListener("DOMContentLoaded", function() {
     const certificates = document.querySelectorAll('.certificate');
     const modal = document.getElementById('certificateModal');
