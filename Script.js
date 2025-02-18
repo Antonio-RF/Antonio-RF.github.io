@@ -46,13 +46,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-let index = 1; // Começamos a partir da 2ª imagem (posição 1)
+let index = 1;
 const carousel = document.querySelector('.carousel');
 const items = document.querySelectorAll('.carousel-item');
 const totalItems = items.length;
 const itemWidth = items[0].clientWidth;
 
-// Posicionamos no primeiro item real (ignorando o clone no início)
+
 carousel.style.transform = `translateX(${-index * itemWidth}px)`;
 
 function moveSlide(direction) {
@@ -61,18 +61,31 @@ function moveSlide(direction) {
     carousel.style.transition = "transform 0.4s ease-in-out";
     carousel.style.transform = `translateX(${-index * itemWidth}px)`;
 
-    // Criamos um evento para detectar quando a transição termina
     carousel.addEventListener("transitionend", () => {
-        if (index === totalItems - 1) { // Se estiver no clone final (depois do último)
-            index = 1; // Volta para o primeiro real
+        if (index === totalItems - 1) {
+            index = 1; 
             carousel.style.transition = "none";
             carousel.style.transform = `translateX(${-index * itemWidth}px)`;
         } 
-        else if (index === 0) { // Se estiver no clone inicial (antes do primeiro)
-            index = totalItems - 2; // Volta para o último real
+        else if (index === 0) { 
+            index = totalItems - 2;
             carousel.style.transition = "none";
             carousel.style.transform = `translateX(${-index * itemWidth}px)`;
         }
     });
 }
+
+function autoMoveSlide() {
+    moveSlide(1);
+}
+
+let autoSlideInterval = setInterval(autoMoveSlide, 5000);
+
+carousel.addEventListener('mouseenter', () => {
+    clearInterval(autoSlideInterval);
+});
+
+carousel.addEventListener('mouseleave', () => {
+    autoSlideInterval = setInterval(autoMoveSlide, 5000);
+});
 

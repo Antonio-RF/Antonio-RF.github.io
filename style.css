@@ -113,9 +113,9 @@ nav .dropdown:hover .dropdown-menu {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
-    background: transparent; /* Remove o fundo branco claro */
+    background: transparent;
     border-radius: 15px;
-    box-shadow: none; /* Remove a sombra */
+    box-shadow: none; 
 }
 
 @keyframes slideIn {
@@ -155,7 +155,7 @@ nav .dropdown:hover .dropdown-menu {
     gap: 20px;
     justify-content: center;
     animation: slideIn 1.5s ease-in-out;
-    background: rgba(255, 255, 255, 0.9); /* Fundo branco claro */
+    background: rgba(255, 255, 255, 0.9); 
     padding: 40px 20px;
     border-radius: 15px;
     margin: 40px 0;
@@ -163,33 +163,33 @@ nav .dropdown:hover .dropdown-menu {
 }
 
 .projects-title {
-    text-align: center; /* Centraliza o título */
-    margin-bottom: 40px; /* Espaçamento abaixo do título */
+    text-align: center; 
+    margin-bottom: 40px; /
 }
 
 
 .projects-title h2 {
-    font-size: 2.2rem; /* Mesmo tamanho do título "My Skills" */
-    color: var(--primary-color); /* Mesma cor do título "My Skills" */
-    font-weight: 800; /* Mesma espessura da fonte */
-    letter-spacing: 2px; /* Espaçamento entre as letras */
+    font-size: 2.2rem; 
+    color: var(--primary-color); 
+    font-weight: 800; 
+    letter-spacing: 2px; 
 }
 
 .projects-container {
-    display: flex; /* Layout flexível para alinhar os projetos em linha */
-    flex-wrap: wrap; /* Permite que os projetos quebrem para a próxima linha se necessário */
-    gap: 20px; /* Espaçamento entre os projetos */
-    justify-content: center; /* Centraliza os projetos horizontalmente */
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
 }
 
 .project {
-    background: #fff; /* Fundo branco forte */
-    border-radius: 15px; /* Bordas arredondadas */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra */
-    width: 300px; /* Largura fixa para cada projeto */
-    overflow: hidden; /* Esconde conteúdo que ultrapassa o contêiner */
-    text-align: left; /* Alinha o texto à esquerda */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de hover */
+    background: #fff; 
+    border-radius: 15px; 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+    width: 300px; 
+    overflow: hidden; 
+    text-align: left; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 @keyframes fadeInUp {
@@ -204,46 +204,46 @@ nav .dropdown:hover .dropdown-menu {
 }
 
 .project:hover {
-    transform: scale(1.05); /* Efeito de zoom no hover */
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Sombra mais forte no hover */
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); 
 }
 
 .project img {
-    width: 100%; /* Largura total */
-    height: 200px; /* Altura fixa */
-    object-fit: cover; /* Ajusta a imagem para cobrir o espaço */
-    border-bottom: 5px solid var(--primary-color); /* Borda inferior */
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-bottom: 5px solid var(--primary-color); 
 }
 
 .project .info {
-    padding: 20px; /* Espaçamento interno */
+    padding: 20px; 
 }
 
 .project .info h3 {
-    margin: 0 0 10px; /* Espaçamento abaixo do título */
-    font-size: 1.5rem; /* Tamanho da fonte */
-    color: var(--primary-color); /* Cor do título */
+    margin: 0 0 10px; 
+    font-size: 1.5rem; 
+    color: var(--primary-color);
 }
 
 .project .info p {
-    margin: 0 0 15px; /* Espaçamento abaixo do parágrafo */
-    font-size: 1rem; /* Tamanho da fonte */
-    color: var(--text-color); /* Cor do texto */
+    margin: 0 0 15px; 
+    font-size: 1rem; 
+    color: var(--text-color); 
 }
 
 .project .info a {
-    display: inline-block; /* Transforma o link em um bloco */
-    text-decoration: none; /* Remove sublinhado */
-    background: var(--primary-color); /* Cor de fundo */
-    color: #fff; /* Cor do texto */
-    padding: 10px 20px; /* Espaçamento interno */
-    border-radius: 25px; /* Bordas arredondadas */
-    transition: background 0.3s ease, transform 0.3s ease; /* Efeito de hover */
+    display: inline-block;
+    text-decoration: none; 
+    background: var(--primary-color); 
+    color: #fff; 
+    padding: 10px 20px;
+    border-radius: 25px; 
+    transition: background 0.3s ease, transform 0.3s ease; 
 }
 
 .project .info a:hover {
-    background: var(--secondary-color); /* Cor de fundo no hover */
-    transform: scale(1.1); /* Efeito de zoom no hover */
+    background: var(--secondary-color); 
+    transform: scale(1.1); 
 }
 
 
@@ -282,7 +282,7 @@ nav .dropdown:hover .dropdown-menu {
 }
 
 .skills {
-    background: #fff; /* Fundo branco forte */
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco forte */
     padding: 40px 20px;
     margin: 40px 0;
     border-radius: 15px;
@@ -451,7 +451,7 @@ footer p {
 }
 
 .certificates {
-    background: #fff; /* Fundo branco forte */
+    background: rgba(255, 255, 255, 0.9);; /* Fundo branco forte */
     padding: 40px 20px;
     margin: 40px 0;
     border-radius: 15px;

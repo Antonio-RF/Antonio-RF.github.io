@@ -20,11 +20,11 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#certificates">Certificates</a></li>
-                <li><a href="#pictures-graduate">Pictures</a></li> <!-- Novo link -->
+                <li><a href="#pictures-graduate">Pictures</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -43,7 +43,7 @@
         <section id="projects" class="projects">
             <!-- Título "My Projects" -->
             <div class="projects-title">
-                <h2><span class="title-bubble">My projects</span></h2>
+                <h2><span class="title-bubble">My Projects</span></h2>
             </div>
         
             <!-- Contêiner para os projetos -->
@@ -84,32 +84,28 @@
 <!------------------- My Skills -------------------->
 
         <!-- Seção de Skills com fundo branco claro -->
-        <div class="section-background">
-            <section class="skills" id="skills">
-                <h2>My Skills</h2>
-                <ul>
-                    <li>HTML</li>
-                    <li>C++</li>
-                    <li>C</li>
-                    <li>Python</li>
-                    <li>Pascal</li>
-                </ul>
-            </section>
-        </div>
+        <section class="skills" id="skills">
+            <h2><span class="title-bubble">My Skills</span></h2>
+            <ul>
+                <li>HTML</li>
+                <li>C++</li>
+                <li>C</li>
+                <li>Python</li>
+                <li>Pascal</li>
+            </ul>
+        </section>
     
 <!-------------------------------------------------------------------------------------------------------------------------------->
 <!------------------- My Certificates -------------------->
 
         <!-- Seção de Certificados com fundo branco claro -->
-        <div class="section-background">
-            <section class="certificates" id="certificates">
-                <h2>My Certificates</h2>
-                <div class="certificate">
-                    <img src="Assets/python_cybersecurity.jpg" alt="Python Cybersecurity Certificate" class="certificate-img">
-                    <p>Python Cybersecurity</p>
-                </div>
-            </section>
-        </div>
+        <section class="certificates" id="certificates">
+            <h2><span class="title-bubble">My Certificates</span></h2>
+            <div class="certificate">
+                <img src="Assets/python_cybersecurity.jpg" alt="Python Cybersecurity Certificate" class="certificate-img">
+                <p>Python Cybersecurity</p>
+            </div>
+        </section>
     
         <!-- Modal para mostrar a imagem -->
         <div id="certificateModal" class="modal">
@@ -121,34 +117,33 @@
 
 <!-------------------------------------------------------------------------------------------------------------------------------->
 <!------------------- Pictures during my graduate -------------------->
-
-    <section class="pictures-graduate" id="pictures-graduate">
-        <h2><span class="title-bubble">Pictures during my graduate</span></h2>
-        <div class="carousel-container">
-            <button class="carousel-btn left" onclick="moveSlide(-1)">&#10094;</button>
-            <div class="carousel">
-                 <!-- Duplicamos o último item no começo -->
-                <img src="Assets/Picture3.jpeg" alt="Graduation Picture 7" class="carousel-item">
-                
-                <!-- Imagens originais -->
-                <img src="Assets/Picture9.jpeg" alt="Graduation Picture 1" class="carousel-item">
-                <img src="Assets/Picture8.jpeg" alt="Graduation Picture 1" class="carousel-item">
-                <img src="Assets/Picture4.jpeg" alt="Graduation Picture 1" class="carousel-item">
-                <img src="Assets/Picture6.jpeg" alt="Graduation Picture 2" class="carousel-item">
-                <img src="Assets/Picture7.jpeg" alt="Graduation Picture 3" class="carousel-item">
-                <img src="Assets/Picture1.jpeg" alt="Graduation Picture 4" class="carousel-item">
-                <img src="Assets/Picture5.jpeg" alt="Graduation Picture 5" class="carousel-item">
-                <img src="Assets/Picture2.jpeg" alt="Graduation Picture 6" class="carousel-item">
-                <img src="Assets/Picture3.jpeg" alt="Graduation Picture 7" class="carousel-item">
-                
-                <!-- Duplicamos o primeiro item no final -->
-                <img src="Assets/Picture4.jpeg" alt="Graduation Picture 1" class="carousel-item">
-            </div>
-            <button class="carousel-btn right" onclick="moveSlide(1)">&#10095;</button>
+<section class="pictures-graduate" id="pictures-graduate">
+    <h2><span class="title-bubble">Pictures during my graduate</span></h2>
+    <div class="carousel-container">
+        <button class="carousel-btn left" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="carousel">
+             <!-- Duplicamos o último item no começo -->
+            <img src="Assets/Picture3.jpeg" alt="Graduation Picture 7" class="carousel-item">
+            
+            <!-- Imagens originais -->
+            <img src="Assets/Picture6.jpeg" alt="Graduation Picture 2" class="carousel-item">
+            <img src="Assets/Picture4.jpeg" alt="Graduation Picture 1" class="carousel-item">
+            <img src="Assets/Picture7.jpeg" alt="Graduation Picture 3" class="carousel-item">
+            <img src="Assets/Picture9.jpeg" alt="Graduation Picture 1" class="carousel-item">
+            <img src="Assets/Picture8.jpeg" alt="Graduation Picture 1" class="carousel-item">
+            <img src="Assets/Picture1.jpeg" alt="Graduation Picture 4" class="carousel-item">
+            <img src="Assets/Picture5.jpeg" alt="Graduation Picture 5" class="carousel-item">
+            <img src="Assets/Picture2.jpeg" alt="Graduation Picture 6" class="carousel-item">
+            <img src="Assets/Picture3.jpeg" alt="Graduation Picture 7" class="carousel-item">
+            
+            <!-- Duplicamos o primeiro item no final -->
+            <img src="Assets/Picture6.jpeg" alt="Graduation Picture 1" class="carousel-item">
         </div>
-    </section>
-
+        <button class="carousel-btn right" onclick="moveSlide(1)">&#10095;</button>
     </div>
+</section>
+
+</div>
 
 <!-------------------------------------------------------------------------------------------------------------------------------->
 <!------------------- About me -------------------->
@@ -182,7 +177,7 @@
 <!------------------- Creators of this site -------------------->
 
     <footer>
-        <p>This site was created by <a href="https://github.com/Rubiks05" target="_blank">Antonio da Ressurreição Filho</a> and <a href="https://github.com/Muhammad-Noraeii" target="_blank">Muhammad Noraeii</a></p>
+        <p>This site was created by <a href="https://github.com/Rubiks05" target="_blank">Antonio da Ressurreição Filho</a>
     </footer>
 
     <script src="Script.js"></script>
