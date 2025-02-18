@@ -25,21 +25,33 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-let index = 0;
+let index = 1; // Começamos a partir da 2ª imagem (posição 1)
+const carousel = document.querySelector('.carousel');
+const items = document.querySelectorAll('.carousel-item');
+const totalItems = items.length;
+const itemWidth = items[0].clientWidth;
+
+// Posicionamos no primeiro item real (ignorando o clone no início)
+carousel.style.transform = `translateX(${-index * itemWidth}px)`;
 
 function moveSlide(direction) {
-    const carousel = document.querySelector('.carousel');
-    const items = document.querySelectorAll('.carousel-item');
-    const totalItems = items.length;
-
     index += direction;
-
-    if (index < 0) {
-        index = totalItems - 1;
-    } else if (index >= totalItems) {
-        index = 0;
-    }
-
-    const itemWidth = items[0].clientWidth; 
+    
+    carousel.style.transition = "transform 0.4s ease-in-out";
     carousel.style.transform = `translateX(${-index * itemWidth}px)`;
+
+    // Criamos um evento para detectar quando a transição termina
+    carousel.addEventListener("transitionend", () => {
+        if (index === totalItems - 1) { // Se estiver no clone final (depois do último)
+            index = 1; // Volta para o primeiro real
+            carousel.style.transition = "none";
+            carousel.style.transform = `translateX(${-index * itemWidth}px)`;
+        } 
+        else if (index === 0) { // Se estiver no clone inicial (antes do primeiro)
+            index = totalItems - 2; // Volta para o último real
+            carousel.style.transition = "none";
+            carousel.style.transform = `translateX(${-index * itemWidth}px)`;
+        }
+    });
 }
+

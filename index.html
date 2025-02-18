@@ -31,81 +31,115 @@
         <p>Welcome! Here you can explore my projects, learn about my skills, and get in touch with me.</p>
     </header>
 
+<!-------------------------------------------------------------------------------------------------------------------------------->
+<!------------------- My Projects -------------------->
+
     <div class="container">
         <section class="resume">
             <a href="https://github.com/Rubiks05" target="_blank">Git Hub Profile</a>
         </section>
-
+    
         <section id="projects" class="projects">
-            <div id="STG" class="project">
-                <img src="Assets/py.jpg" alt="Project 1">
-                <div class="info">
-                    <h3>Strong Password Generator</h3>
-                    <p>This is a project developed during the summer vacation of 2024/2025 and consists of a strong password generator. It includes various options related to password creation and encryption, such as: checking strong passwords, generating a random strong password, generating an encrypted strong password, decrypting a password, and encrypting a password with a specific key.</p>
-                    <a href="https://github.com/Rubiks05/Strong-Password-Generator">View Project</a>
-                </div>
+            <!-- Título "My Projects" -->
+            <div class="projects-title">
+                <h2><span class="title-bubble">My projects</span></h2>
             </div>
         
-            <div id="The-Boys" class="project">
-                <img src="Assets/the-boys.jpg" alt="Project 2">
-                <div class="info">
-                    <h3>The-Boys</h3>
-                    <p>As the final project for the Programming 1 course, this project was developed to simulate a world of heroes, bases, and missions, inspired by the famous Amazon Prime Video series. With over 1,500 lines of code and immense complexity, the entire world of this DC Comics universe is interconnected, and every event that occurs affects both itself and future events.</p>
-                    <a href="https://github.com/Rubiks05/The-Boys">View Project</a>
+            <!-- Contêiner para os projetos -->
+            <div class="projects-container">
+                <!-- Projeto 1 -->
+                <div id="STG" class="project">
+                    <img src="Assets/py.jpg" alt="Project 1">
+                    <div class="info">
+                        <h3>Strong Password Generator</h3>
+                        <p>This is a project developed during the summer vacation of 2024/2025 and consists of a strong password generator. It includes various options related to password creation and encryption, such as: checking strong passwords, generating a random strong password, generating an encrypted strong password, decrypting a password, and encrypting a password with a specific key.</p>
+                        <a href="https://github.com/Rubiks05/Strong-Password-Generator">View Project</a>
+                    </div>
                 </div>
-            </div>
         
-            <div id="SA" class="project">
-                <img src="Assets/ss.jpg" alt="Project 3">
-                <div class="info">
-                    <h3>Sorting and Searching Algorithms</h3>
-                    <p>Created in the Algorithms and Data Structures 2 course, this project was developed with the aim of learning more about some sorting and searching algorithms. Containing four types of sorting and two types of searching, this project displays all the comparisons and swaps these algorithms perform when executed.</p>
-                    <a href="https://github.com/Rubiks05/Sorting-and-Searching-Algorithms">View Project</a>
+                <!-- Projeto 2 -->
+                <div id="The-Boys" class="project">
+                    <img src="Assets/the-boys.jpg" alt="Project 2">
+                    <div class="info">
+                        <h3>The-Boys</h3>
+                        <p>As the final project for the Programming 1 course, this project was developed to simulate a world of heroes, bases, and missions, inspired by the famous Amazon Prime Video series. With over 1,500 lines of code and immense complexity, the entire world of this DC Comics universe is interconnected, and every event that occurs affects both itself and future events.</p>
+                        <a href="https://github.com/Rubiks05/The-Boys">View Project</a>
+                    </div>
+                </div>
+        
+                <!-- Projeto 3 -->
+                <div id="SA" class="project">
+                    <img src="Assets/ss.jpg" alt="Project 3">
+                    <div class="info">
+                        <h3>Sorting and Searching Algorithms</h3>
+                        <p>Created in the Algorithms and Data Structures 2 course, this project was developed with the aim of learning more about some sorting and searching algorithms. Containing four types of sorting and two types of searching, this project displays all the comparisons and swaps these algorithms perform when executed.</p>
+                        <a href="https://github.com/Rubiks05/Sorting-and-Searching-Algorithms">View Project</a>
+                    </div>
                 </div>
             </div>
         </section>
+    
+<!-------------------------------------------------------------------------------------------------------------------------------->
+<!------------------- My Skills -------------------->
 
-        <section class="skills" id="skills">
-            <h2>My Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>C++</li>
-                <li>C</li>
-                <li>Python</li>
-                <li>Pascal</li>
-            </ul>
-        </section>
+        <!-- Seção de Skills com fundo branco claro -->
+        <div class="section-background">
+            <section class="skills" id="skills">
+                <h2>My Skills</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>C++</li>
+                    <li>C</li>
+                    <li>Python</li>
+                    <li>Pascal</li>
+                </ul>
+            </section>
+        </div>
+    
+<!-------------------------------------------------------------------------------------------------------------------------------->
+<!------------------- My Certificates -------------------->
 
-        <section class="certificates" id="certificates">
-            <h2>My Certificates</h2>
-            <div class="certificate">
-                <img src="Assets/python_cybersecurity.jpg" alt="Python Cybersecurity Certificate" class="certificate-img">
-                <p>Python Cybersecurity</p>
-            </div>
-        </section>
-        
+        <!-- Seção de Certificados com fundo branco claro -->
+        <div class="section-background">
+            <section class="certificates" id="certificates">
+                <h2>My Certificates</h2>
+                <div class="certificate">
+                    <img src="Assets/python_cybersecurity.jpg" alt="Python Cybersecurity Certificate" class="certificate-img">
+                    <p>Python Cybersecurity</p>
+                </div>
+            </section>
+        </div>
+    
         <!-- Modal para mostrar a imagem -->
         <div id="certificateModal" class="modal">
             <span class="close">&times;</span>
             <img id="modalImage" class="modal-content">
             <div id="caption"></div>
         </div>
-               
-        
     </div>
 
+<!-------------------------------------------------------------------------------------------------------------------------------->
+<!------------------- Pictures during my graduate -------------------->
+
     <section class="pictures-graduate" id="pictures-graduate">
-        <h2>Pictures during my graduate</h2>
+        <h2><span class="title-bubble">Pictures during my graduate</span></h2>
         <div class="carousel-container">
             <button class="carousel-btn left" onclick="moveSlide(-1)">&#10094;</button>
             <div class="carousel">
+                 <!-- Duplicamos o último item no começo -->
+                <img src="Assets/Picture3.jpeg" alt="Graduation Picture 7" class="carousel-item">
+                
+                <!-- Imagens originais -->
                 <img src="Assets/Picture4.jpeg" alt="Graduation Picture 1" class="carousel-item">
                 <img src="Assets/Picture6.jpeg" alt="Graduation Picture 2" class="carousel-item">
-                <img src="Assets/Picture3.jpeg" alt="Graduation Picture 3" class="carousel-item">
-                <img src="Assets/Picture1.jpeg" alt="Graduation Picture 3" class="carousel-item">
-                <img src="Assets/Picture5.jpeg" alt="Graduation Picture 3" class="carousel-item">
-                <img src="Assets/Picture2.jpeg" alt="Graduation Picture 3" class="carousel-item">
                 <img src="Assets/Picture7.jpeg" alt="Graduation Picture 3" class="carousel-item">
+                <img src="Assets/Picture1.jpeg" alt="Graduation Picture 4" class="carousel-item">
+                <img src="Assets/Picture5.jpeg" alt="Graduation Picture 5" class="carousel-item">
+                <img src="Assets/Picture2.jpeg" alt="Graduation Picture 6" class="carousel-item">
+                <img src="Assets/Picture3.jpeg" alt="Graduation Picture 7" class="carousel-item">
+                
+                <!-- Duplicamos o primeiro item no final -->
+                <img src="Assets/Picture4.jpeg" alt="Graduation Picture 1" class="carousel-item">
             </div>
             <button class="carousel-btn right" onclick="moveSlide(1)">&#10095;</button>
         </div>
@@ -113,7 +147,8 @@
 
     </div>
 
-
+<!-------------------------------------------------------------------------------------------------------------------------------->
+<!------------------- About me -------------------->
     <section class="about-section" id="about">
         <div class="about-content">
             <h2>About Me</h2>
@@ -128,13 +163,20 @@
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Email: <strong>antoniodaressurreicao@ufpr.br</strong></p>
-            <p>Second Email: <strong>antoniidaressurreicao@gmail.com</strong></p>
-        </div>
-    </section>
+<!-------------------------------------------------------------------------------------------------------------------------------->
+<!------------------- Contact me -------------------->
+    <div class="section-background">    
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <p>Email: <strong>antoniodaressurreicao@ufpr.br</strong></p>
+                <p>Second Email: <strong>antoniidaressurreicao@gmail.com</strong></p>
+            </div>
+        </section>
+    </div>
+
+<!-------------------------------------------------------------------------------------------------------------------------------->
+<!------------------- Creators of this site -------------------->
 
     <footer>
         <p>This site was created by <a href="https://github.com/Rubiks05" target="_blank">Antonio da Ressurreição Filho</a> and <a href="https://github.com/Muhammad-Noraeii" target="_blank">Muhammad Noraeii</a></p>
@@ -143,5 +185,7 @@
     <script src="Script.js"></script>
 </body>
 </html>
+
+<!-------------------------------------------------------------------------------------------------------------------------------->
 
 

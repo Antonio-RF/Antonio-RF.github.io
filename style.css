@@ -113,9 +113,9 @@ nav .dropdown:hover .dropdown-menu {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.8);
+    background: transparent; /* Remove o fundo branco claro */
     border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: none; /* Remove a sombra */
 }
 
 @keyframes slideIn {
@@ -155,18 +155,41 @@ nav .dropdown:hover .dropdown-menu {
     gap: 20px;
     justify-content: center;
     animation: slideIn 1.5s ease-in-out;
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco claro */
+    padding: 40px 20px;
+    border-radius: 15px;
+    margin: 40px 0;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.projects-title {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 40px; /* Espaçamento abaixo do título */
+}
+
+
+.projects-title h2 {
+    font-size: 2.2rem; /* Mesmo tamanho do título "My Skills" */
+    color: var(--primary-color); /* Mesma cor do título "My Skills" */
+    font-weight: 800; /* Mesma espessura da fonte */
+    letter-spacing: 2px; /* Espaçamento entre as letras */
+}
+
+.projects-container {
+    display: flex; /* Layout flexível para alinhar os projetos em linha */
+    flex-wrap: wrap; /* Permite que os projetos quebrem para a próxima linha se necessário */
+    gap: 20px; /* Espaçamento entre os projetos */
+    justify-content: center; /* Centraliza os projetos horizontalmente */
 }
 
 .project {
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: var(--card-shadow);
-    width: var(--card-width);
-    overflow: hidden;
-    text-align: left;
-    opacity: 0;
-    animation: fadeInUp 0.6s ease-out forwards;
-    transition: transform var(--transition-duration), box-shadow var(--transition-duration);
+    background: #fff; /* Fundo branco forte */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    width: 300px; /* Largura fixa para cada projeto */
+    overflow: hidden; /* Esconde conteúdo que ultrapassa o contêiner */
+    text-align: left; /* Alinha o texto à esquerda */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de hover */
 }
 
 @keyframes fadeInUp {
@@ -181,56 +204,46 @@ nav .dropdown:hover .dropdown-menu {
 }
 
 .project:hover {
-    transform: scale(var(--hover-scale));
-    box-shadow: var(--card-hover-shadow);
+    transform: scale(1.05); /* Efeito de zoom no hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Sombra mais forte no hover */
 }
 
 .project img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 5px solid var(--primary-color);
-    transition: transform var(--transition-duration);
-}
-
-.project img:hover {
-    transform: scale(1.05);
+    width: 100%; /* Largura total */
+    height: 200px; /* Altura fixa */
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço */
+    border-bottom: 5px solid var(--primary-color); /* Borda inferior */
 }
 
 .project .info {
-    padding: 20px;
+    padding: 20px; /* Espaçamento interno */
 }
 
 .project .info h3 {
-    margin: 0 0 10px;
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    transition: color var(--transition-duration);
-}
-
-.project .info h3:hover {
-    color: var(--secondary-color);
+    margin: 0 0 10px; /* Espaçamento abaixo do título */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    color: var(--primary-color); /* Cor do título */
 }
 
 .project .info p {
-    margin: 0 0 15px;
-    font-size: 1rem;
-    color: var(--text-color);
+    margin: 0 0 15px; /* Espaçamento abaixo do parágrafo */
+    font-size: 1rem; /* Tamanho da fonte */
+    color: var(--text-color); /* Cor do texto */
 }
 
 .project .info a {
-    display: inline-block;
-    text-decoration: none;
-    background: var(--primary-color);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 25px;
-    transition: background var(--transition-duration), transform var(--transition-duration);
+    display: inline-block; /* Transforma o link em um bloco */
+    text-decoration: none; /* Remove sublinhado */
+    background: var(--primary-color); /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 25px; /* Bordas arredondadas */
+    transition: background 0.3s ease, transform 0.3s ease; /* Efeito de hover */
 }
 
 .project .info a:hover {
-    background: var(--secondary-color);
-    transform: scale(1.1);
+    background: var(--secondary-color); /* Cor de fundo no hover */
+    transform: scale(1.1); /* Efeito de zoom no hover */
 }
 
 
@@ -269,7 +282,7 @@ nav .dropdown:hover .dropdown-menu {
 }
 
 .skills {
-    background: #fff;
+    background: #fff; /* Fundo branco forte */
     padding: 40px 20px;
     margin: 40px 0;
     border-radius: 15px;
@@ -438,7 +451,7 @@ footer p {
 }
 
 .certificates {
-    background: #fff;
+    background: #fff; /* Fundo branco forte */
     padding: 40px 20px;
     margin: 40px 0;
     border-radius: 15px;
@@ -1096,12 +1109,25 @@ footer p {
     color: #000000; /* E-mails em branco */
 }
 
+
+
+
+
+
 .pictures-section {
     background: red;
     color: white;
     text-align: center;
     padding: 50px 0;
     font-family: 'Arial', sans-serif;
+}
+
+.pictures-graduate h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
 }
 
 .carousel-container {
@@ -1131,6 +1157,7 @@ footer p {
     padding: 10px;
     cursor: pointer;
     font-size: 24px;
+    display: block;
 }
 
 .carousel-btn.left {
@@ -1139,6 +1166,40 @@ footer p {
 
 .carousel-btn.right {
     right: 10px;
+}
+
+.pictures-graduate {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.title-bubble {
+    background: white; /* Fundo branco */
+    padding: 8px 16px; /* Espaçamento interno */
+    border-radius: 12px; /* Bordas arredondadas */
+    display: inline-block; /* Para que o fundo se ajuste ao tamanho do texto */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+
+.section-background {
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco claro */
+    padding: 40px 20px;
+    border-radius: 15px;
+    margin: 40px 0; /* Margem para separar as seções */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+}
+
+#projects {
+    margin-bottom: 80px; /* Aumentei para 80px (ou o valor que preferir) */
+}
+
+#skills {
+    margin-bottom: 80px; /* Aumentei para 80px (ou o valor que preferir) */
+}
+
+#certificates {
+    margin-bottom: 80px; /* Aumentei para 80px (ou o valor que preferir) */
 }
 
 
