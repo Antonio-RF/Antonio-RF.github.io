@@ -248,7 +248,10 @@ nav .dropdown:hover .dropdown-menu {
 
 
 .resume {
-    margin: 40px 0;
+    position: absolute;
+    margin: -20px 0;
+    transform: translateX(-50%);
+    left: calc(50% - 120px);
 }
 
 .resume a {
@@ -264,6 +267,30 @@ nav .dropdown:hover .dropdown-menu {
 }
 
 .resume a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.resume2 {
+    position: absolute;
+    margin: -20px 0;
+    transform: translateX(-50%);
+    left: calc(50% + 120px);
+}
+
+.resume2 a {
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient(135deg, #6200ea, #3700b3);
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.resume2 a:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
