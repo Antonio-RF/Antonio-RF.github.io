@@ -1232,5 +1232,55 @@ footer p {
     padding-bottom: 80px;
 }
 
+.pictures-graduate {
+    text-align: center;
+    padding: 20px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%; /* Ajuste o tamanho do container */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 calc(100% / 3); /* Mostra 3 fotos por vez */
+    box-sizing: border-box;
+    padding: 5px; /* Espaçamento entre as fotos */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Borda arredondada (opcional) */
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+}
+
+.carousel-btn.left {
+    left: 10px;
+}
+
+.carousel-btn.right {
+    right: 10px;
+}
+
 
 /*End of the code!*/

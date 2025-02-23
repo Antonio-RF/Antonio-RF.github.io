@@ -46,46 +46,24 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-let index = 1;
+let index = 0;
 const carousel = document.querySelector('.carousel');
 const items = document.querySelectorAll('.carousel-item');
 const totalItems = items.length;
-const itemWidth = items[0].clientWidth;
-
-
-carousel.style.transform = `translateX(${-index * itemWidth}px)`;
+const itemWidth = items[0].clientWidth + parseInt(window.getComputedStyle(items[0]).marginRight);
 
 function moveSlide(direction) {
+    // Calcula o novo índice
     index += direction;
-    
+
+    // Verifica os limites
+    if (index < 0) {
+        index = totalItems - 3; // Volta para o final
+    } else if (index > totalItems - 3) {
+        index = 0; // Volta para o início
+    }
+
+    // Move o carrossel
     carousel.style.transition = "transform 0.4s ease-in-out";
     carousel.style.transform = `translateX(${-index * itemWidth}px)`;
-
-    carousel.addEventListener("transitionend", () => {
-        if (index === totalItems - 1) {
-            index = 1; 
-            carousel.style.transition = "none";
-            carousel.style.transform = `translateX(${-index * itemWidth}px)`;
-        } 
-        else if (index === 0) { 
-            index = totalItems - 2;
-            carousel.style.transition = "none";
-            carousel.style.transform = `translateX(${-index * itemWidth}px)`;
-        }
-    });
 }
-
-function autoMoveSlide() {
-    moveSlide(1);
-}
-
-let autoSlideInterval = setInterval(autoMoveSlide, 5000);
-
-carousel.addEventListener('mouseenter', () => {
-    clearInterval(autoSlideInterval);
-});
-
-carousel.addEventListener('mouseleave', () => {
-    autoSlideInterval = setInterval(autoMoveSlide, 5000);
-});
-
