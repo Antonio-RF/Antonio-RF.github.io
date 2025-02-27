@@ -1283,23 +1283,23 @@ footer p {
 }
 
 
+
 .projects-carousel {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
+    display: flex; /* Exibe os projetos em linha */
+    transition: transform 0.4s ease-in-out; /* Adiciona animação ao mover o carrossel */
     gap: 20px; /* Espaçamento entre os projetos */
 }
 
+
 .project {
-    flex: 0 0 calc(33.33% - 20px); /* Exibe 3 projetos por vez */
+    flex: 0 0 calc(33.33% - 20px); /* Define a largura de cada projeto (3 por linha) */
     box-sizing: border-box;
-    transition: transform 0.4s ease-in-out;
 }
 
 .carousel-container {
     position: relative;
     width: 100%;
-    overflow: hidden;
+    overflow: hidden; /* Esconde os projetos que estão fora da área visível */
 }
 
 .carousel-btn {
