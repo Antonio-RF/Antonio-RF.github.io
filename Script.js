@@ -67,3 +67,25 @@ function moveSlide(direction) {
     carousel.style.transition = "transform 0.4s ease-in-out";
     carousel.style.transform = `translateX(${-index * itemWidth}px)`;
 }
+
+let projectIndex = 0;
+const projectCarousel = document.querySelector('.projects-carousel');
+const projects = document.querySelectorAll('.project');
+const totalProjects = projects.length;
+const projectWidth = projects[0].clientWidth + parseInt(window.getComputedStyle(projects[0]).marginRight);
+
+function moveProjectSlide(direction) {
+    // Calcula o novo índice
+    projectIndex += direction;
+
+    // Verifica os limites
+    if (projectIndex < 0) {
+        projectIndex = totalProjects - 3; // Volta para o final
+    } else if (projectIndex > totalProjects - 3) {
+        projectIndex = 0; // Volta para o início
+    }
+
+    // Move o carrossel
+    projectCarousel.style.transition = "transform 0.4s ease-in-out";
+    projectCarousel.style.transform = `translateX(${-projectIndex * projectWidth}px)`;
+}

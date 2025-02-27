@@ -156,15 +156,15 @@ nav .dropdown:hover .dropdown-menu {
     justify-content: center;
     animation: slideIn 1.5s ease-in-out;
     background: rgba(255, 255, 255, 0.9); 
-    padding: 40px 20px;
+    padding: 20px 20px 40px 20px;
     border-radius: 15px;
-    margin: 40px 0;
+    margin: 120px 0 40px 0;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .projects-title {
     text-align: center; 
-    margin-bottom: 40px; /
+    margin-bottom: 20px; /
 }
 
 
@@ -249,7 +249,7 @@ nav .dropdown:hover .dropdown-menu {
 
 .resume {
     position: absolute;
-    margin: -20px 0;
+    margin: 20px 0;
     transform: translateX(-50%);
     left: calc(50% - 120px);
 }
@@ -273,7 +273,7 @@ nav .dropdown:hover .dropdown-menu {
 
 .resume2 {
     position: absolute;
-    margin: -20px 0;
+    margin: 20px 0;
     transform: translateX(-50%);
     left: calc(50% + 120px);
 }
@@ -1271,6 +1271,46 @@ footer p {
     padding: 10px;
     cursor: pointer;
     font-size: 24px;
+    z-index: 10;
+}
+
+.carousel-btn.left {
+    left: 10px;
+}
+
+.carousel-btn.right {
+    right: 10px;
+}
+
+
+.projects-carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    gap: 20px; /* Espaçamento entre os projetos */
+}
+
+.project {
+    flex: 0 0 calc(33.33% - 20px); /* Exibe 3 projetos por vez */
+    box-sizing: border-box;
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
     z-index: 10;
 }
 
