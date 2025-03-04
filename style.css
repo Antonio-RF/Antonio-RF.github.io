@@ -478,7 +478,7 @@ footer p {
 }
 
 .certificates {
-    background: rgba(255, 255, 255, 0.9);; /* Fundo branco forte */
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco forte */
     padding: 40px 20px;
     margin: 40px 0;
     border-radius: 15px;
@@ -486,6 +486,7 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%; /* Garante que o contêiner ocupe toda a largura disponível */
 }
 
 .certificates h2 {
@@ -498,18 +499,18 @@ footer p {
 
 .certificates-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 20px;
+    justify-content: space-between; /* Distribui o espaço entre os certificados */
+    gap: 20px; /* Espaçamento entre os certificados */
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 800px; /* Define uma largura máxima para o contêiner (ajuste conforme necessário) */
 }
 
 .certificate {
-    display: inline-flex;
+    flex: 1; /* Faz com que os certificados ocupem o espaço disponível igualmente */
+    text-align: center;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
     cursor: pointer;
     transition: transform var(--transition-duration), box-shadow var(--transition-duration);
     will-change: transform, box-shadow;
@@ -518,9 +519,6 @@ footer p {
     position: relative;
     padding: 15px;
     box-shadow: var(--box-shadow);
-}
-
-.certificate:first-child {
     background: linear-gradient(135deg, var(--highlight-color), var(--secondary-color));
 }
 
