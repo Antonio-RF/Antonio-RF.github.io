@@ -1209,9 +1209,8 @@ footer p {
 
 .section-background {
     background: rgba(255, 255, 255, 0.9); /* Fundo branco claro */
-    padding: 40px 20px;
     border-radius: 15px;
-    margin: 40px 0; /* Margem para separar as seções */
+    margin: 5px 0; /* Margem para separar as seções */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
 }
 
