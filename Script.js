@@ -68,6 +68,9 @@ function moveSlide(direction) {
     carousel.style.transform = `translateX(${-index * itemWidth}px)`;
 }
 
+
+
+/*
 let projectIndex = 0;
 const projectCarousel = document.querySelector('.projects-carousel');
 const projects = document.querySelectorAll('.project');
@@ -88,4 +91,40 @@ function moveProjectSlide(direction) {
     // Move o carrossel
     projectCarousel.style.transition = "transform 0.4s ease-in-out";
     projectCarousel.style.transform = `translateX(${-projectIndex * projectWidth}px)`;
+}*/
+
+let projectIndex = 0;
+const projectCarousel = document.querySelector('.projects-carousel');
+const projects = document.querySelectorAll('.project');
+const totalProjects = projects.length;
+
+function moveProjectSlide(direction) {
+    projectIndex += direction;
+
+    // Verifica os limites (loop infinito)
+    if (projectIndex < 0) {
+        projectIndex = totalProjects - 1;
+    } else if (projectIndex >= totalProjects) {
+        projectIndex = 0;
+    }
+
+    // Pega o estilo computado do projeto e do carrossel
+    const projectStyle = window.getComputedStyle(projects[0]);
+    const carouselStyle = window.getComputedStyle(projectCarousel);
+
+    // Calcula a largura TOTAL de um projeto (incluindo margens e gap)
+    const projectWidth = projects[0].offsetWidth;
+    const marginLeft = parseInt(projectStyle.marginLeft) || 0;
+    const marginRight = parseInt(projectStyle.marginRight) || 0;
+    const gap = parseInt(carouselStyle.gap) || 0; // Pega o "gap" do CSS Flexbox
+
+    const totalItemWidth = projectWidth + marginLeft + marginRight + gap;
+
+    // Aplica o deslocamento
+    projectCarousel.style.transition = "transform 0.4s ease-in-out";
+    projectCarousel.style.transform = `translateX(${-projectIndex * totalItemWidth}px)`;
 }
+
+// Inicializa e ajusta ao redimensionar
+window.addEventListener('load', moveProjectSlide.bind(null, 0));
+window.addEventListener('resize', moveProjectSlide.bind(null, 0));

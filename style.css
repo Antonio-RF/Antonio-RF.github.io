@@ -1156,6 +1156,8 @@ footer p {
 }
 
 .carousel-container {
+    padding-left: 30px;
+    padding-right: 30px;
     position: relative;
     max-width: 80%;
     margin: auto;
@@ -1283,14 +1285,18 @@ footer p {
 
 .projects-carousel {
     display: flex; /* Exibe os projetos em linha */
-    transition: transform 0.4s ease-in-out; /* Adiciona animação ao mover o carrossel */
+    transition: hidden; /* Adiciona animação ao mover o carrossel */
     gap: 20px; /* Espaçamento entre os projetos */
+    width: 100%;
 }
 
 
 .project {
-    flex: 0 0 calc(33.33% - 20px); /* Define a largura de cada projeto (3 por linha) */
+    /*flex: 0 0 calc(33.33% - 20px);*/ /* Define a largura de cada projeto (3 por linha) */
+    flex: 0 0 auto;
+    width: 300px;
     box-sizing: border-box;
+    margin: 0;
 }
 
 .carousel-container {
